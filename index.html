@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="CSS/lista.css"></link>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Exercicios 1 - PHP</title>
+    </head>
+
+    <body>
+        <div class="header-type">
+            <h1>Resolução da Lista de Exercícios</h1>
+            <h2>PHP - Lista 1</h2>
+        </div>
+
+        <div class="resolution">
+
+            <form action="PHP/ex1.php" action="GET" class="exercises">
+                <h2>1.	Escreva um algoritmo que leia um número e mostre seu inteiro.</h2>
+                <label for="that-float">Insira um número: </label>
+                <input type="number" name="that-float" step="0.0001" min="1" value="3.1415">
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+            </form>
+
+            <form action="PHP/ex2.php" action="GET" class="exercises">
+                <h2 class="not-the-first">2.	Faça um algoritmo que leia o nome e as idades de duas pessoas e mostre a soma das idades.</h2>
+                <input type="text" name="first-person" class="pessoa" value="João" required>
+                <input type="number" name="first-age" class="pessoa" value="28" required>
+
+                <p>
+                    <label for="second-person">Nome e idade da segunda pessoa? </label><br>
+                    <input type="text" name="second-person" class="pessoa" value="Maria" required>
+                    <input type="number" name="second-age" class="pessoa" value="27" required>
+                </p>
+                
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+            </form>
+
+            <form action="PHP/ex3.php" action="GET" class="exercises">
+                <h2 class="not-the-first">3.	Repita o exercício anterior, porém, mostrando a frase abaixo, substituindo as lacunas pelas informações obtidas no sistema.</h2>
+                <h3>A soma das idades de XXXXX e XXXXX é XXXXX</h3>
+
+                <label for="first-person">Nome e idade da primeira pessoa? </label><br>
+                <input type="text" name="first-person" class="pessoa" value="João" required>
+                <input type="number" name="first-age" class="pessoa" value="28" required>
+
+                <p>
+                    <label for="second-person">Nome e idade da segunda pessoa? </label><br>
+                    <input type="text" name="second-person" class="pessoa" value="Maria" required>
+                    <input type="number" name="second-age" class="pessoa" value="27" required>
+                </p>
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+            </form>
+
+            <form action="PHP/ex4.php" action="GET" class="exercises">
+                <h2 class="not-the-first">4.	Escreva um algoritmo que leia dois números que deverão ser colocados, respectivamente, nas variáveis VA 
+                    e VB. O algoritmo deve, então, trocar os valores de VA por VB e vice-versa e mostrar o conteúdo destas variáveis.</h2>
+                
+                <label for="first-var">Insira uma primeira variavel </label>
+                <input type="text" name="first-var" value="XPTO" required>
+
+                <label for="second-var">Insira uma segunda variavel </label>
+                <input type="text" name="second-var" value="Batata" required>
+                
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+            </form>
+            
+            <form action="PHP/ex5.php" action="GET" class="exercises">
+                <h2 class="not-the-first">5.	Faça um algoritmo que leia valores para as variáveis A, B e C e mostre o resultado da seguinte expressão:</h2>
+                <h3>( A – B ) * C</h3>
+
+                <label for="number-A">Insira um número para A: </label>
+                <input type="number" name="number-A" step="0.01" min="1" value="2" required>
+
+                <label for="number-B">Insira um número para B: </label>
+                <input type="number" name="number-B" step="0.01" min="1" value="1" required>
+
+                <label for="number-C">Insira um número para C: </label>
+                <input type="number" name="number-C" step="0.1" min="1" value="3" required>
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+            </form>
+
+            <form action="PHP/ex6.php" action="GET" class="exercises">
+                <h2 class="not-the-first">6.	Escrever um algoritmo para ler uma temperatura em Fahrenheit e apresentá-la convertida em graus Centígrados.</h2>
+                <h3>Formula: C = ((F -32) * 5) / 9</h3>
+
+                <label for="fahrenheit">Insira uma temperatura em Fahrenheit: </label>
+                <input type="number" name="fahrenheit" step="0.1" min="1" value="82" required>
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+            </form>
+            
+            <form action="PHP/ex7.php" action="GET" class="exercises">
+                <h2 class="not-the-first">7.	Maria quer saber quantos litros de gasolina precisa colocar em seu carro e quanto vai gastar para fazer uma viagem até a casa de sua irmã.</h2>
+                
+                Dados adicionais:
+                <ul>
+                    <li>Distância da casa de Maria até sua irmã: 520 km.</li>
+                    <li>Seu carro consome 12 litros de gasolina por Km/rodado.</li>
+                    <li>Ela abastece sempre no mesmo posto, onde o preço da gasolina é R$ 1,50 o litro.</li>
+                </ul>
+
+                <label for="distancia">Distância a percorrer: </label>
+                <input type="number" name="distancia" step="0.01" min="1" value="520" required>
+
+                <label for="consumo">Consumo do carro: </label>
+                <input type="number" name="consumo" step="0.01" min="1" value="12" required>
+
+                <label for="gasolina">Valor do litro da gasolina: </label>
+                <input type="number" name="gasolina" step="0.1" min="1" value="1.5" required>
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+            </form>
+
+            <form action="PHP/ex8.php" action="GET" class="exercises">
+                <h2 class="not-the-first">8.	Escreva um algoritmo para ler um valor inteiro em segundos, e depois converter e mostrá-lo no formato hh:mm:ss.</h2>
+                <label for="segundos">Insira um valor em segundos para conversão: </label>
+                <input type="number" name="segundos" step="0.1" min="1" value="1" required>
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+            </form>
+        </div>
+
+        <div class="footer">
+
+            Exercícios feitos conforme proposta da Digital House por Rodrigo Castilho em 24 de março de 2020
+            <p>
+                rodrigo.m.castilho@outlook.com
+            </p>
+        </div>
+    </body>
+</html>
