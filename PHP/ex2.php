@@ -4,6 +4,6 @@
     $idadeUm = $_GET['first-age'];
     $idadeDois = $_GET['second-age'];
 
-    echo "A soma das idades é ",$idadeUm + $idadeDois,";
+    echo "A soma das idades é ",$idadeUm + $idadeDois;
  ?>
  
