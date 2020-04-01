@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="CSS/lacos.css"></link>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Exercicios 2 - Desvios  e Laços de Repetição</title>
+    </head>
+
+    <body>
+        <div class="header-type">
+            <h1>Resolução da Lista de Exercícios</h1>
+            <h2>Desvios e Laços de Repetição</h2>
+        </div>
+
+        <div class="resolution">
+            <center>
+                <h2 class="subtype">Desvio Condicional</h2>
+            </center>
+
+            <form onsubmit="return inteiroZeroNove();">
+                <h2>1. Elabore um algoritmo que efetue a leitura de números inteiros e apresente uma mensagem informando se os valores lidos estão dentro ou fora da faixa de 0 a 9.</h2>
+                <label for="desvex1">Insira um número: </label>
+                <input type="number" name="desvex1" id="desvex1" step="1" min="1" value="10">
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+                
+                <script>
+                    function inteiroZeroNove() {
+                        var numero = document.getElementById('desvex1').value;
+
+                        if(numero>=0){
+                            if(numero<=9){
+                                document.write("<p>Dentro da faixa 0-9</p>");
+                            } else {
+                                document.write("<p>Fora da faixa 0-9</p>");
+                            }
+                        } else {
+                            document.write("<p>Fora da faixa 0-9</p>");
+                        }
+                    }
+                </script>
+
+                <p>
+                    <a href="Desvio Condicional/Fluxogramas/desv_cond_ex1.jpg">Ver o fluxograma desse processo</a>
+                </p>
+            </form>
+
+            <hr>
+
+            <form onsubmit="return inteiroZeroCem();">
+                <h2 class="not-the-first">2. Elabore um algoritmo que efetue a leitura de um número inteiro e apresente uma mensagem informando se o valor lido é negativo ou se está entre 0 e 100 ou se é maior que 100.</h2>
+                <label for="desvex2">Insira um número: </label>
+                <input type="number" name="desvex2" id="desvex2" value="10">
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+                
+                <script>
+                    function inteiroZeroCem() {
+                        var numero = document.getElementById('desvex2').value;
+
+                        if(numero<0){
+                            document.write("Numero negativo");
+                        } else if(numero<=100) {
+                            document.write("Numero entre 0 e 100");
+                        } else {
+                            document.write("Numero maior do que 100");
+                        }
+                    }
+                </script>
+
+                <p>
+                    <a href="Desvio Condicional/Fluxogramas/desv_cond_ex2.jpg">Ver o fluxograma desse processo</a>
+                </p>
+            </form>
+
+            <hr>
+
+            <form onsubmit="return parOuImpar();">
+                <h2>3. Desenvolva um algoritmo que efetue a leitura de um número inteiro e apresente uma mensagem informando se ele é um número par ou ímpar.</h2>
+                <label for="desvex3">Insira um número: </label>
+                <input type="number" name="desvex3" id="desvex3" value="10" step="1">
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+                
+                <script>
+                    function parOuImpar() {
+                        var numero = document.getElementById('desvex3').value;
+
+                        if(numero % 2 == 0){
+                            document.write("Numero par");
+                        } else {
+                            document.write("Numero impar");
+                        }
+                    }
+                </script>
+
+                <p>
+                    <a href="Desvio Condicional/Fluxogramas/desv_cond_ex3.jpg">Ver o fluxograma desse processo</a>
+                </p>
+            </form>
+
+            <hr>
+
+            <form onsubmit="return ordemDosCinco();">
+                <h2>4. Elabore um algoritmo que efetue a leitura de 5 números inteiros e apresente o menor e o maior número lido. Não é permitido fazer ordenação.</h2>
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+                
+                <script>
+                    function ordemDosCinco() {
+                        var lista = [];
+                        var i = 0;
+
+                        while(i<5){
+                            let numero = prompt("Insira um numero inteiro");
+                            numero = parseInt(numero);
+                            lista.push(numero);
+                            i++
+                        }
+
+                        var maximo = Math.max.apply(Math, lista);
+                        var minimo = Math.min.apply(Math, lista);
+
+                        document.write("Seus inteiros: " + lista);
+                        document.write("<p></p>Maximo: " + maximo);
+                        document.write("<p></p>Minimo: " + minimo);
+                    }
+                </script>
+
+                <p>
+                    <a href="Desvio Condicional/Fluxogramas/desv_cond_ex4.jpg">Ver o fluxograma desse processo</a>
+                </p>
+            </form>
+
+            <hr>
+
+            <form onsubmit="return trianguloValido();">
+                <h2>5. Desenvolva um algoritmo que efetue a leitura de 3 valores, identifique se estes valores são válidos para formar um triângulo, em caso negativo deve informar ao usuário por meio de uma mensagem, caso positivo, deve informar ao usuário por meio de uma mensagem, que tipo de triângulo os valores/lados formam.</h2>
+                
+                <label for="lado-a-triangulo">Insira o primeiro lado: </label>
+                <input type="number" name="lado-a-triangulo" id="lado-a-triangulo" value="10" step="1">
+
+                <label for="lado-b-triangulo">Insira o segundo lado: </label>
+                <input type="number" name="lado-b-triangulo" id="lado-b-triangulo" value="10" step="1">
+
+                <label for="lado-c-triangulo">Insira o terceiro lado: </label>
+                <input type="number" name="lado-c-triangulo" id="lado-c-triangulo" value="10" step="1">
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+
+                <script>
+                function trianguloValido(){
+                    let checkA = (ladoA, ladoB, ladoC) => {
+                        if(Math.abs(ladoB - ladoC) < ladoA && ladoA < (ladoB + ladoC)){
+                            checkA = true;
+                        } else {
+                            checkA = false;
+                        }
+                    }
+
+                    let checkB = (ladoA, ladoB, ladoC) => {
+                        if(Math.abs(ladoA - ladoC) < ladoB && ladoB < (ladoA + ladoC)){
+                            checkB = true;
+                        } else {
+                            checkB = false;
+                        }
+                    }
+
+                    let checkC = (ladoA, ladoB, ladoC) => {
+                        if(Math.abs(ladoA - ladoB) < ladoC && ladoC < (ladoA + ladoB)){
+                            checkC = true;
+                        } else {
+                            checkC = false;
+                        }
+                    }
+
+                    var ladoA = document.getElementById('lado-a-triangulo').value;
+                    var ladoB = document.getElementById('lado-b-triangulo').value;
+                    var ladoC = document.getElementById('lado-c-triangulo').value;
+
+                    ladoA = parseInt(ladoA);
+                    ladoB = parseInt(ladoB);
+                    ladoC = parseInt(ladoC);
+
+                    checkA(ladoA, ladoB, ladoC);
+                    checkB(ladoA, ladoB, ladoC);
+                    checkC(ladoA, ladoB, ladoC);
+
+                    if(checkA || checkB || checkC == false){
+                        console.log("Dimensoes invalidas para confeccionar um triangulo");
+                    } else {
+                        if(ladoA == ladoB == ladoC){
+                            console.log("Triangulo equilatero");
+                        } else if(ladoA != ladoB != ladoC){
+                            console.log("Triangulo escaleno");
+                        } else {
+                            console.log("Triangulo isosceles");
+                        }
+                    }
+                }
+                </script>
+
+                <p>
+                    <a href="Desvio Condicional/Fluxogramas/desv_cond_ex5.jpg">Ver o fluxograma desse processo</a>
+                </p>
+            </form>
+
+        </div>
+
+        <div class="resolution">
+            <center>
+                <h2 class="subtype">Laços de Repetição</h2>
+            </center>
+
+            <form onsubmit="return fatorialImpares();">
+                <h2>1. Elaborar um programa que apresente com resultado, o valor da fatorial dos valores ímpares situados na faixa numéricas de 1 a 10.</h2>
+                
+                <label for="laco1-1">Insira o primeiro número: </label>
+                <input type="number" name="laco1-1" id="laco1-1" value="1" step="1">
+                
+                <label for="laco1-2">Insira o segundo número: </label>
+                <input type="number" name="laco1-2" id="laco1-2" value="10" step="1">
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+                
+                <script>
+                    function fatorialImpares() {
+                        let fatorial = (valor) => {
+
+                        fatorial = valor;
+
+                        for(var x = fatorial -1; x>1; x--){
+                            fatorial *= x;
+                        }
+                        document.write("Fatorial de " + valor + " é " + fatorial + "<br>");
+                        }
+
+                        let limiteInferior = document.getElementById('laco1-1').value;
+                        let limiteSuperior = document.getElementById('laco1-2').value;
+                        var numerosImpares = [];
+
+                        for(var i = limiteInferior; i < limiteSuperior;i++){
+                        if(i % 2 > 0){
+                            numerosImpares.push(i);
+                        }
+                        }
+
+                        numerosImpares.forEach(fatorial);
+                    }
+                </script>
+
+                <p>
+                    <a href="Lacos/Fluxogramas/lacos_ex1.jpg">Ver o fluxograma desse processo</a>
+                </p>
+            </form>
+
+            <hr>
+
+            <form onsubmit="return somaMedia();">
+                <h2>2. Elaborar um programa que apresente os resultados da soma e da média aritmética dos valores pares, situados na faixa numérica de 50 a 70.</h2>
+                
+                <label for="laco2-1">Insira o primeiro número: </label>
+                <input type="number" name="laco2-1" id="laco2-1" value="50" step="1">
+                
+                <label for="laco2-2">Insira o segundo número: </label>
+                <input type="number" name="laco2-2" id="laco2-2" value="70" step="1">
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+                
+                <script>
+                    function somaMedia() {
+                        listaPares = [];
+                        limiteInferior = document.getElementById('laco2-1').value;
+                        limiteSuperior = document.getElementById('laco2-2').value;
+
+                        for(var x = limiteInferior; x < limiteSuperior; x++){
+                            if( x % 2 == 0){
+                                x = parseInt(x);
+                                listaPares.push(x);
+                            }
+                        }
+
+                        var somaTotal = listaPares.reduce((a, b) => a + b, 0)
+                        var mediaGeral = somaTotal / listaPares.length;
+
+                        document.write("A lista de pares no intervalo é " + listaPares + "<p></p>");
+                        document.write("A soma dos pares é: " + somaTotal + "<br>");
+                        document.write("A média dos pares é: " + mediaGeral);
+                    }
+                </script>
+
+                <p>
+                    <a href="Lacos/Fluxogramas/lacos_ex2.jpg">Ver o fluxograma desse processo</a>
+                </p>
+            </form>
+
+            <hr>
+
+            <form onsubmit="return maiorMenorMedia();">
+                <h2>3. Elaborar um programa que efetue a leitura de valores positivos inteiros, até que um valor negativo seja informado. Ao final devem ser apresentados o maior, o menor e a média dos valores lidos.</h2>
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+                
+                <script>
+                    function maiorMenorMedia() {
+                        var lista = [];
+                        let numero = "";
+                        let checker = false;
+
+                        while(!checker){
+                            numero = prompt("Insira um numero inteiro");
+                            numero = parseInt(numero);
+
+                            if(numero < 0){
+                                checker = true;
+                            } else {
+                                checker = false;
+                                lista.push(numero);
+                            }
+                        }
+
+                        var somaTotal = lista.reduce((a, b) => a + b, 0);
+                        var mediaGeral = somaTotal / lista.length;
+                        var maximo = Math.max.apply(Math, lista);
+                        var minimo = Math.min.apply(Math, lista);
+
+                        document.write("Os números listados: " + lista + "<p></p>");
+                        document.write("Maximo: " + maximo + "<br>");
+                        document.write("Minimo: " + minimo + "<br>");
+                        document.write("Media geral: " + mediaGeral);
+                    }
+                </script>
+
+                <p>
+                    <a href="Lacos/Fluxogramas/lacos_ex3.jpg">Ver o fluxograma desse processo</a>
+                </p>
+            </form>
+
+            <hr>
+
+            <form onsubmit="return divisaoInteira();">
+                <h2>4. Elaborar um programa que apresente com resultado o inteiro da divisão de dois números quaisquer. Para este algoritmo, não se deve em hipótese alguma utilizar o conceito do operador DIV. Utilize o conceito de laço.</h2>
+                
+                <label for="laco4-1">Insira o numerador: </label>
+                <input type="number" name="laco4-1" id="laco4-1" value="10" step="1">
+                
+                <label for="laco4-2">Insira o denominador: </label>
+                <input type="number" name="laco4-2" id="laco4-2" value="2" step="1">
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+                
+                <script>
+                    function divisaoInteira() {
+                        var numerador = document.getElementById('laco4-1').value;
+                        var denominador = document.getElementById('laco4-2').value;
+
+                        numerador = parseInt(numerador)
+                        denominador = parseInt(denominador)
+
+                        if (denominador > numerador) {
+                        document.write('A divisão inteira é 0')
+                        }
+
+                        if (denominador == numerador) {
+                        document.write('A divisão inteira é 1')
+                        }
+
+                        let contador = 1
+                        let incremental = denominador
+
+                        while (incremental <= numerador) {
+                        if (incremental > numerador) {
+                            contador--
+                            document.write(
+                            'A divisão inteira de ' +
+                                numerador +
+                                ' por ' +
+                                denominador +
+                                ' é ' +
+                                contador
+                            )
+                            break;
+                        } else if (incremental == numerador) {
+                            document.write(
+                            'A divisão inteira de ' +
+                                numerador +
+                                ' por ' +
+                                denominador +
+                                ' é ' +
+                                contador
+                            )
+                            break;
+                        } else {
+                            incremental += denominador
+                            contador++
+                        }
+                        }
+                    }
+                </script>
+
+                <p>
+                    <a href="Lacos/Fluxogramas/lacos_ex4.jpg">Ver o fluxograma desse processo</a>
+                </p>
+            </form>
+
+            <hr>
+
+            <form onsubmit="return exponenciacao();">
+                <h2>5. Elaborar um programa que apresente como resultado, o valor de uma potência de uma base qualquer, elevado a um expoente qualquer, mas sem a utilização do operador exponenciação.</h2>
+
+                <label for="laco5-1">Insira a base: </label>
+                <input type="number" name="laco5-1" id="laco5-1" value="10" step="1">
+                
+                <label for="laco5-2">Insira o expoente: </label>
+                <input type="number" name="laco5-2" id="laco5-2" value="2" step="1">
+
+                <center><input type="submit" value="Obter resultado" class="submission" required></center>
+                
+                <script>
+                    function exponenciacao() {
+                        var base = document.getElementById('laco5-1').value;
+                        var expoente = document.getElementById('laco5-2').value;
+
+                        base = parseInt(base);
+                        expoente = parseInt(expoente);
+
+                        if(expoente==1){
+                            document.write("O resultado da exponenciação é " + base);
+                        } else {
+                            var contador = 1;
+                            var resultado = base;
+
+                            do {
+                                contador++;
+                                resultado *= base
+                            } while(contador != expoente);
+
+                            document.write("O resultado da exponenciação é " + resultado);
+                        }
+                    }
+                </script>
+
+                <p>
+                    <a href="Lacos/Fluxogramas/lacos_ex5.jpg">Ver o fluxograma desse processo</a>
+                </p>
+            </form>
+        </div>
+
+        <div class="footer">
+
+            Exercícios feitos conforme proposta da Digital House por Rodrigo Castilho em 01 de abril de 2020
+            <p>
+                rodrigo.m.castilho@outlook.com
+            </p>
+        </div>
+    </body>
+</html>
